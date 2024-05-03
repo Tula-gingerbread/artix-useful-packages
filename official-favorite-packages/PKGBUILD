@@ -13,7 +13,7 @@ depends=(
 	'firefox'
 	'wine' 'winetricks'
 	'fish' 'vim' 'nano' 'neofetch' 'git' 'htop' 'nmap' 'ranger'
-	'libreoffice-freesh' 'libreoffice-fresh-ru' 'vlc'
+	'libreoffice-fresh' 'libreoffice-fresh-ru' 'vlc'
 	'discord' 'steam' 'code'
 	'base-devel' 'plasma-meta'
 )

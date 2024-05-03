@@ -7,7 +7,7 @@ arch=('any')
 url='https://github.com/Tula-gingerbread/Artix-packages'
 license=('GPL')
 source=("file://${startdir}/brightness")
-b2sums=('281f09c552d510cee0b78dd61330163e54e858bd2bef95e4d6d3b9aaa0bebe740e99a4fdd1d176e87d619e03eaa51e11ff4de2f60d92a87da743b73523d69638')
+b2sums=('202d2bf9e8a72ccea01e84f8e49036d2e286221170a5c49c52d638f5b0935b9cea2c1503da3c40b014d604c0548867f224463b5a7995a36ac4132798a3f3fb10')
 
 
 package() {

@@ -8,7 +8,7 @@ url='https://github.com/Tula-gingerbread/Artix-packages'
 license=('GPL')
 depends=('pacman' 'archlinux-keyring')
 source=("file://${startdir}/arch-mirrorlist")
-b2sums=('SKIP')
+b2sums=('9422a5d7a30b32f1bd4b4ca052448bb3604e1e56f5185e657be3f7f541b21e0722bd076eaafd9b8a9ca2dbf442247d830f07ae3ee07da672fe2466babfbd4a2f')
 
 package() {
 	install -Dm 644 'arch-mirrorlist' "${pkgdir}/etc/pacman.d/arch-mirrorlist"
