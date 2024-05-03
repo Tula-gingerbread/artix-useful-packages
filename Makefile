@@ -1,6 +1,7 @@
 all: build
 
 build:
+	@echo 'AUR packages will not be builded'
 	for dir in */; do \
 		cd "$$dir" && \
 		makepkg -sr --noconfirm --needed; \
@@ -9,6 +10,7 @@ build:
 
 
 install:
+	@echo 'AUR packages will not be installed'
 	for dir in */; do \
 		cd "$$dir" && \
 		makepkg -i --noconfirm --needed; \
@@ -17,6 +19,5 @@ install:
 
 clean:
 	rm -rf */src/ */pkg/
-
 
 .PHONY: all build install clean
