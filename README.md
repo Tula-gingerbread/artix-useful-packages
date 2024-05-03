@@ -28,3 +28,5 @@ key.asc: <br>
 
 README.md: <br>
  - READIT
+
+P.S.: I won't update packages versions
