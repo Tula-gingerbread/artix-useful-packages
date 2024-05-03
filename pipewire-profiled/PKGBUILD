@@ -1,0 +1,24 @@
+# Maintainer: Ivan <ivanmaisky123@gmail.com>
+pkgname=pipewire-profiled
+pkgver=1.0
+pkgrel=1
+pkgdesc='Autostart pipewire using /etc/profile.d'
+arch=('any')
+url='https://github.com/Tula-gingerbread/Artix-packages'
+license=('GPL')
+depends=('pipewire' 'pipewire-pulse' 'wireplumber')
+optdepends=('xdg-desktop-portal'
+    'xdg-desktop-portal-gnome'
+    'xdg-desktop-portal-gtk'
+    'xdg-desktop-portal-hyprland'
+    'xdg-desktop-portal-kde'
+    'xdg-desktop-portal-wlr'
+    'xdg-desktop-portal-lxqt'
+    'xdg-desktop-portal-xapp'
+)
+source=("file://${startdir}/pipewire.sh")
+b2sums=('060663dda8d6a0be2636cb87bdd8ffe3dbd51d9334f815c3ea4995e92ee709cfb8a14ee352ac179fa9b27d17af18ba31b022f0b4cf36e0a94652ddfc4554b044')
+
+package() {
+    install -Dm 755 pipewire.sh "${pkgdir}/etc/profile.d/pipewire.sh"
+}

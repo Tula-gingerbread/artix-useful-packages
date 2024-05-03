@@ -1,0 +1,19 @@
+# Maintainer: Ivan <ivanmaisky123@gmail.com>
+pkgname=official-favorite-packages
+pkgver=1.0
+pkgrel=1
+pkgdesc='Meta packet for my favorite packages'
+arch=('any')
+url='https://github.com/Tula-gingerbread/Artix-packages'
+license=('GPL')
+
+depends=(
+	'konsole' 'dolphin' 'partitionmanager'
+	'bitwarden'
+	'firefox'
+	'wine' 'winetricks'
+	'fish' 'vim' 'nano' 'neofetch' 'git' 'htop' 'nmap' 'ranger'
+	'libreoffice-freesh' 'libreoffice-fresh-ru' 'vlc'
+	'discord' 'steam' 'code'
+	'base-devel' 'plasma-meta'
+)

@@ -1,0 +1,15 @@
+# Maintainer: Ivan <ivanmaisky123@gmail.com>
+pkgname='restore-brightness'
+pkgver=1.0
+pkgrel=1
+pkgdesc='Restore last brightness on boot'
+arch=('any')
+url='https://github.com/Tula-gingerbread/Artix-packages'
+license=('GPL')
+source=("file://${startdir}/brightness")
+b2sums=('281f09c552d510cee0b78dd61330163e54e858bd2bef95e4d6d3b9aaa0bebe740e99a4fdd1d176e87d619e03eaa51e11ff4de2f60d92a87da743b73523d69638')
+
+
+package() {
+	install -Dm 755 brightness "$pkgdir/etc/init.d/brightness"
+}

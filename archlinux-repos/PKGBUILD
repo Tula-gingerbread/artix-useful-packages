@@ -1,0 +1,15 @@
+# Maintainer: Ivan <ivanmaisky123@gmail.com>
+pkgname=archlinux-mirrors
+pkgver=1.0
+pkgrel=1
+pkgdesc="Some Arch mirrors"
+arch=('any')
+url='https://github.com/Tula-gingerbread/Artix-packages'
+license=('GPL')
+depends=('pacman' 'archlinux-keyring')
+source=("file://${startdir}/arch-mirrorlist")
+b2sums=('SKIP')
+
+package() {
+	install -Dm 644 'arch-mirrorlist' "${pkgdir}/etc/pacman.d/arch-mirrorlist"
+}

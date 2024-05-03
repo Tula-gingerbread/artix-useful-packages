@@ -1,0 +1,38 @@
+#!/sbin/openrc-run
+
+description="Save and restore screen brightness"
+
+depend() {
+    need localmount
+    after modules
+}
+
+start() {
+    ebegin "Restoring last saved screen brightness"
+
+    for gpu in $(ls /sys/class/backlight --color=never); do
+        gpu_sys="/sys/class/backlight/$gpu"
+
+        if [ -f "/etc/brightness/$gpu" ]; then
+            saved="$(cat "/etc/brightness/$gpu")"
+            if [ "$saved" -lt "$(cat "$gpu_sys/max_brightness")" ]; then
+                echo "$saved" > "$gpu_sys/brightness"
+            fi
+        else
+            echo "No saved brightness level to restore for $gpu."
+        fi
+    done
+
+    eend $?
+}
+
+stop() {
+    ebegin "Saving current screen brightness"
+
+    mkdir -p /etc/brightness
+    for gpu in $(ls /sys/class/backlight --color=never); do
+        cat "/sys/class/backlight/$gpu/brightness" > "/etc/brightness/$gpu"
+    done
+    
+    eend $?
+}
