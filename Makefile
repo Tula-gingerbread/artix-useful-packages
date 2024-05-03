@@ -4,7 +4,7 @@ build:
 	@echo 'AUR packages will not be builded'
 	for dir in */; do \
 		cd "$$dir" && \
-		makepkg -sr --noconfirm --needed; \
+		makepkg -sr --noconfirm --needed --sign -f; \
 		cd ..; \
 	done
 
