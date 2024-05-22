@@ -3,7 +3,7 @@ Some usefull packages for OpenRC Artix
 Run grand_build.sh to build/install all packages
 
 archlinux-repos/: <br>
- - Some Reflector-generated Arch mirrors. It will placed in /etc/pacman.d/arch-mirrorlist
+ - My archlinux repo :)
 
 AUR favorite packages/: <br>
  - My beloved packages from AUR. First run prepare.sh, then build or install
