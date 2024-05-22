@@ -17,6 +17,9 @@ pipewire profiled/:
 restore brightness/: <br>
  - OpenRC script to restore/save brightness on boot/shutdown
 
+zram-service/: <br>
+ - Make ZRAM
+
 .gitignore: <br>
  - Ignore builded packages, src/ and pkg/ dirs
 
@@ -24,7 +27,7 @@ Makefile: <br>
  - make all packages (exclude AUR favorite packages)
 
 key.asc: <br>
- - My GNU PG public key in ascii. I don't know why it here
+ - My GNU PG public key in ascii. All packages are signed with this key
 
 README.md: <br>
  - READIT
