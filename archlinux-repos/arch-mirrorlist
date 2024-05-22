@@ -8,13 +8,4 @@
 # Retrieved:  2024-05-02 14:23:25 UTC
 # Last Check: 2024-05-02 14:06:59 UTC
 
-Server = https://mirror.sunred.org/archlinux/$repo/os/$arch
-Server = https://archlinux.thaller.ws/$repo/os/$arch
-Server = https://mirror.moson.org/arch/$repo/os/$arch
-Server = https://mirror.lty.me/archlinux/$repo/os/$arch
-Server = https://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch
-Server = https://mirror.f4st.host/archlinux/$repo/os/$arch
-Server = https://sydney.mirror.pkgbuild.com/$repo/os/$arch
-Server = https://seoul.mirror.pkgbuild.com/$repo/os/$arch
-Server = https://arch.mirror.constant.com/$repo/os/$arch
-Server = https://archlinux.za.mirror.allworldit.com/archlinux/$repo/os/$arch
+Server = https://mirror.infirium.ru/archlinux/$os/repo/$arch
