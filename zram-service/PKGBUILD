@@ -1,0 +1,15 @@
+# Maintainer: Ivan <ivanmaisky123@gmail.com>
+pkgname=zram-service
+pkgver=1.0
+pkgrel=1
+pkgdesc='Init script for setting up zram swap'
+arch=('any')
+url='https://github.com/Tula-gingerbread/artix-useful-packages'
+license=('GPL')
+depends=('util-linux')
+source=("file://${startdir}/zram")
+b2sums=('0b36eb7152de1349b1dd01a6205743546ea23037cbcef1d41e3ce065a3b472fb4a461cf4c1746d5cd1d16f8b11cd181562140c3a0a1835d99d9b72a9269d1ea9')
+
+package() {
+    install -Dm755 "${srcdir}/zram" "${pkgdir}/etc/init.d/zram"
+}

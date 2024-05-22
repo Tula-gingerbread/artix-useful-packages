@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+
+description="Make zram"
+
+depend() {
+    need localmount
+    modprobe zram
+}
+
+start() {
+    ebegin "Making zram 2GiB, ZSTD, 8S"
+    zram="$(zramctl --find --size 2GiB --streams 8 --algorithm zstd)" 
+    mkswap "$zram"
+    swapon "$zram"
+    echo "$zram" > /tmp/ZRAM_SRV_DEV.ORC
+    eend $?
+}
+
+stop() {
+    ebegin "Removing swap"
+    zram="$(cat /tmp/ZRAM_SRV_DEV.ORC)"
+    swapoff "$zram"
+    eend $?
+}
